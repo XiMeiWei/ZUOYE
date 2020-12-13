@@ -1,0 +1,583 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf_8" />
+<title>黑土之家特效总站</title>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+body,html{
+	height:1000px;
+}
+html,body{
+    height: 100%;
+}
+body{
+	background: url("图片（11）.jpg");
+	background-size: cover;
+}
+#img-wrap{
+	width: 100%;
+	height: 150px;
+	background-color: rgba(0,0,0,0.46);
+	padding-top: 13px;
+}
+.list{
+	list-style-type: none;
+	width: 1000px;
+	height: 150px;
+	margin: 0 auto;
+}
+.item {
+	float: left;
+	margin: 5 15px;
+}
+.item img{
+	width: 95px;
+	height: 60px;
+}
+.item img:hover{
+	color: #FF0099;
+}
+#tab-btn{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 50px;	
+	background-image: url("images/upseek.png");
+	cursor: pointer;
+}
+#tab-btn:hover{
+	background-position-y: -64px;
+}
+.snowfall-flakes1{
+	position: relative;
+	width: 20px;
+	height: 20px;
+	margin: 50px auto;
+	/*background-color: #096;*/
+}
+header {
+	background-color: rgba(210,50,50,0.46);
+	display: block;
+	color: #2178D8;
+	text-align: center;
+}
+h1{
+	font-size: 72px;
+	margin: 0px;
+}
+h2{
+	font-size: 24px;
+	margin: 0px;
+	text-align: center;
+}
+h3{
+	font-size: 18px;
+	margin: 0px;
+	text-align: center;
+}
+nav{
+	display: block;
+	width: 100%;
+	float: left;	
+	text-align: center;
+	background-color: rgba(204,204,204,0.46);
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+nav a:link, nav a:visited {
+	display: inline;
+	border-bottom: 3px solid #00FFCC;
+	padding: 10px;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 5px;
+}
+nav a:hover {
+	color: #CC3333;
+	background-color: rgba(255,255,0,0.46);
+}
+nav h3{
+	margin: 15px;
+}
+#container{
+	background-color: rgba(185,74,,221,0.46);
+}
+section{
+	display: block;
+	width: 70%;
+	float: left;
+}
+article{
+	background-color: rgba(0,255,204,0.16);
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+article header{
+	padding: 5px;
+}
+article footer{
+	padding: 5px;
+}
+article h1{
+	font-size: 18px;
+}
+aside{
+	display: block;
+	width: 15%;
+	float: left;
+}
+aside h3{
+	margin: 15px;
+}
+aside p{	
+	margin: 15px;
+	font-weight: bold;
+}
+footer{
+	clear: both;
+	display: block;
+	background-color: rgba(51,0,204,0.16);
+	color: #CC99CC;
+	text-align: center;
+	padding: 15px;
+}
+footer h2{
+	font-size: 14px;
+	color: #FF66FF;
+}
+a {
+	color:  #CC99CC;
+}
+h3{
+	color:  #CC99CC;
+}
+p{
+	color:  #CC99CC;
+}
+a:hover{
+	text-decoration: underline;
+}
+.x{
+	width:100%;
+	height:166px;
+}
+#lunbo{ 
+	width:340px; 
+	height:500px;
+	position:relative;
+}
+.ul_lunbo{
+	width:100%; 
+	height:100%;
+	position:relative;
+	top:0px
+}
+.li_lunbo{
+	width:340px;
+	height:100%;
+	position:absolute; 
+	left:0px;
+	top:10px;
+}/*//为li标签设置所在区域有*/
+.img_lunbo{ 
+	width:1060px; 
+	height:500px;
+}/*//为图片定义大小*/
+.login_box {
+	margin-top: 0px;
+	margin-left: 39px;
+}
+
+.login_box a {
+ 	cursor: pointer;
+}
+
+#mask {
+ 	width: 80px;
+ 	height: 80px;
+	background-color: red;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+#show {
+	width: 80px;
+	height: 80px;
+	background-color: red;
+	display: none;
+}
+.list{
+	border:1px solid red;
+}
+.block{
+ 	margin:0 auto;
+ 	float:left;
+}
+.biao{
+ 	margin-top: 20px;
+ 	position:absolute;
+ 	z-index:2;
+ 	margin-left: 150px;
+ }
+.txt{
+    line-height: 50px;
+    width:280px;
+    font-size: 15px;
+    color:black;
+    border-style: none;
+}
+#box{
+	color:red;
+}
+.up {
+	display: none; 
+	width: 80px; 
+	height: 30px; 
+	background:red ; 
+	position: fixed; 
+	right: 10px; 
+	bottom: 20px;
+}
+.fangkuai{
+	height:500px;
+}
+.xiangmu{
+	color:#CC99CC;
+}
+.tuowei{
+	width:5px; 
+	height:5px; 
+	background:#D200D2; 
+	position:absolute; 
+	border-radius: 50%;
+	top:0; 
+	left:0;
+}
+#tupiao{
+	width: 150px;
+    height: 150px;
+    background:url("img-e59ea1a8c407ad1c5921c8a55bd2984e.jpg");
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+.daxiao{
+	width:150px;
+	height: 150px;
+}
+</style>
+
+   
+<script type="text/javascript">
+	function goTop(){
+		var odiv = document.getElementById("top");
+		//将滚动距离设置为0，兼容性写法
+		document.documentElement.scrollTop = document.body.scrollTop = 0;
+	}
+	window.onscroll = function(){
+		var odiv = document.getElementById("top");
+		//获取垂直滚动条的滚动距离，兼容性写法
+		var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		if(scrollTop > 180){	
+			odiv.style.display = "block";
+		} else {
+			odiv.style.display = "none"
+		}
+	}
+</script>
+<script>
+	document.onmousemove=function(ev){
+		var aDiv=document.getElementsByClassName('tuowei');
+		var oEvent=ev||event;
+		//遍历所有DIV，从第二个开始到结束
+		for(var i=aDiv.length-1;i>0; i--){
+			//将第N个的坐标 赋给 第N+1个（即第N+1个跟随第N个）
+			aDiv[i].style.top=aDiv[i-1].style.top;
+			aDiv[i].style.left=aDiv[i-1].style.left;	
+		}
+		//最后将鼠标位置赋给第一个
+		aDiv[0].style.left=oEvent.clientX+'px'
+		aDiv[0].style.top=oEvent.clientY+'px'
+	}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+	
+	<div id="img-wrap">
+		<ul class="list">
+			<li class="item">
+				<img src="图片（1）.jpg" alt="" />
+			</li>
+			<li class="item">
+				<img src="图片（2）.jpg" alt="" />
+			</li>
+			<li class="item">
+				<img src="图片（3）.jpg" alt="" />
+			</li>
+			<li class="item">
+				<img src="图片（4）.jpg" alt="" />
+			</li>
+			<li class="item">
+				<img src="图片（5）.jpg" alt="" />
+			</li>
+			<li class="item">
+				<img src="图片（6）.jpg" alt="" />
+			</li>
+			<li class="item">
+				<img src="图片（7）.jpg" alt="" />
+			</li>
+			<li class="item">
+				<img src="图片（8）.jpg" alt="" />
+			</li>
+			<li class="item">
+				<img src="图片（9）.jpg" alt="" />
+			</li>
+			<li class="item" >
+				<img src="图片（10）.jpg" alt="" />
+			</li>
+			<li class="item" >
+				<img src="图片（11）.jpg" alt="" />
+			</li>
+			<li class="item" >
+				<img src="图片（12）.jpg" alt="" />
+			</li>
+			<li class="item" >
+				<img src="图片（13）.jpg" alt="" />
+			</li>
+			<li class="item" >
+				<img src="图片（14）.jpg" alt="" />
+			</li>
+			<li class="item" >
+				<img src="图片（15）.jpg" alt="" />
+			</li>
+			<li class="item" >
+				<img src="图片（16）.jpg" alt="" />
+			</li>
+		</ul>
+	</div>
+	<div id="tab-btn"> </div>
+	<header>
+	<h1>黑土之家特效总站</h1>
+	</header>
+	<div id="container">
+	<nav>
+	<a href="https://www.baidu.com" target="_blank" >百度一下</a>
+	<a href="https://www.taobao.com" target="_blank">淘宝</a>
+	<a href="https://www.jd.com" target="_blank">京东</a>
+	<a href="http://www.cnblogs.com/" target="_blank">博客园</a>
+	<a href="https://blog.csdn.net/" target="_blank">博客</a>
+	<a href="https://tieba.baidu.com" target="_blank">百度贴吧</a>
+	<a href="https://www.nowcoder.com/" target="_blank">牛客网</a>
+	<a href="https://weibo.com" target="_blank">微博</a>
+	</nav>
+	<aside>
+	<h3>My Style</h3>
+	<div>
+	<a style=" padding-left:40px;" href="https://user.qzone.qq.com/1476027184/main"  target="_blank"/>我的QQ空间</a>
+	<br />
+	<a style=" padding-left:40px;" href="https://weibo.com/u/6336414741/home"  target="_blank"/>我的微博</a>
+	<br />
+	<a style=" padding-left:40px;" href="https://i.csdn.net/#/uc/profile"  target="_blank"/>我的博客</a>
+	<br />
+	<a style=" padding-left:40px;" href="https://mail.qq.com/cgi-bin/frame_html?sid=1_cfIUKAR72LaT5i&r=2906efc2a8beaadb651dedb5da4bedcf"  target="_blank"/>我的邮箱</a>
+	<br />
+	<a style=" padding-left:40px;" href="https://www.cnblogs.com/star147/"  target="_blank">我的博客园</a>
+	<br  />
+	<a style=" padding-left:40px;" href="">北京时间：</a>
+	<br />
+	</div>
+	<div id="box" style=" padding-left:40px;">
+
+	</div>
+	</div>
+	</aside>
+	<section>
+	<article>
+	<header>
+	<h1>我的主页</h1>
+	</header>
+	<div id="lunbo">
+		<ul id="shidian_img" class="ul_lunbo">
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（1）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（2）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（3）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（4）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（5）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（6）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（7）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（8）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（9）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（10）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（11）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（12）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（13）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（14）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（15）.jpg" />
+			</li>
+			<li class="li_lunbo">
+				<img class="img_lunbo" src="图片（16）.jpg" />
+			</li>
+		</ul>
+	</div>
+	<aside>
+	</aside>
+	<footer>
+	<h2>网页背景相册轮播图</h2>
+	</footer>
+	</article>
+	<article>
+	<header>
+	<div class="fangkuai">
+	<h1>我的项目</h1>
+	<p class="xiangmu">目前大型的网络商城竞争激烈，预计不会再有竞争对手加入，毕竟目前各大网络销售商都已经有了大量的客户群体，而且入行时间很长，技术先进，经验丰富。大型的企业进入该领域竞争可能性极低。所以，需要考虑的就是本地企业的竞争，在河南省范围内，能够拿到耳机厂商销售牌照的企业并不是很多，而本企业是第一家进行网络销售的企业，可以率先建立起自己的客户群体，用户自己忠实的客户。这样，其他竞争者想要进入这个市场的时候就会遇到很大的阻力。就企业规模来说，企业在河南省范围内也算上前几名的企业，且具有一些高端的品牌耳机，能够很好的提升企业的形象和信誉。在该领域内来说，企业并不害怕未来可能的进入者作为一个致力于在线销售的网站，应达到为企业带来明显的网络销售利润的目的和作用，同时增加了和客户的沟通，建立一个良好的企业与客户间的关系，培养一批忠诚的顾客也是目的之一,目前普通网站的服务器作业系统以微软的Windows系统和Linux占大多数。Windows优点是操作简便，为大家熟知，配置和管理服务器容易上手，但是费用较贵，而且需要的硬件配置也较Linux要求高。Linux最大的优点是其全免费而且可供配套的免费软件丰富，缺点是操作复杂，需要专门的技术人员维护。 根据以上情况，我们选择使用Linux操作系统，由于租用了虚拟主机，以了，主机运营商负责了系统维护的大部分内容。选择Linux系统后，企业的开发成本将大大降低，因为这是一个完全开源的开发环境。并且由于全世界的程序员都在补充和改进，系统环境的稳定性和安全性都很好。 综上所述，我们选择PHP的开发平台来建立起一个PHP网站。由于企业的技术能力有限，并不能够承担自己开发解决方案的能力，所以计划购买HP的系统性解决方案。 目前在国内PHP与ASP应用最为广泛。上边已经说明，我们选择用PHP技术开发该企业网站。 PHP可以编译成具有与许多数据库相连接的函数。PHP与MySQL是现在绝佳的群组合。你还可以自己编写外围的函数去间接存取数据库。通过这样的途径当你更换使用的数据库时，可以轻松地修改编码以适应这样的变化。PHPLIB就是最常用的可以提供一般事务需要的一系列基库。采用PHP的网站如新浪网（sina）、中国人（Chinaren）等，但由于PHP本身存在的一些缺点，使得它不适合应用于大型电子商务站点，而更适合一些小型的商业站点。 虽然有一些的缺点，但是PHP技术依然有他的优势适合于小型电子商务站点。理由如下： PHP 独特的语法混合了C、Java、Perl以及PHP自创新的语法。PHP安装它可以比CGI或者Perl更快速的执行动态网页。用PHP做出的动态页面与其他的编程语言相比，PHP是将程序嵌入到HTML文档中去执行，执行效率比完全生成HTML标记的CGI要高许多；PHP还可以执行编译后代码，编译可以达到加密和优化代码运行，使代码运行更快。PHP具有非常强大的功能，所有的CGI的功能PHP都能实现，而且支持几乎所有流行的数据库以及操作系统。最重要的是PHP可以用C、C++进行程 ,PHP技术还有如下8大优势：（1）开放的源代码：所有的PHP源代码事实上都可以得到。（2）PHP是免费的。和其它技术相比，PHP本身免费。（3）PHP的快捷性，程序开发快，运行快，技术本身学习快。嵌入于HTML：因为PHP可以被嵌入于HTML语言，它相对于其他语言，编辑简单，实用性强，更适合初学者。（4）跨平台性强：由于PHP是运行在服务器端的脚本,可以运行在UNIX、LINUX、WINDOWS下。（5）效率高：PHP消耗相当少的系统资源。。</p>
+	</ul>
+	</div>
+	</header>
+	</article>
+	</section>
+	<aside>
+	<h3>网站说明</h3>
+	<p>该网站为独立个人网站，网站由各种效果搭建而成</p>
+	</aside>
+	</div>
+
+	<div id="top" class="up" onclick="goTop()" >回到顶部</div>
+	<div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div>
+	<div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div>
+	<div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div>
+	<div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div>
+	<div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div>
+	<div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div>
+	<div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div><div class="tuowei"></div>
+	
+
+	<div id="tupiao">
+		<img class="daxiao" src="img-e59ea1a8c407ad1c5921c8a55bd2984e.jpg">
+	</div>
+	<script type="text/javascript">
+	index=0;
+	function show_img(){
+		var imgs=document.getElementById("shidian_img").children; //获取所以图片 并且存储到数组imgs数组里
+		for(i =0; i<imgs.length;i++){
+			imgs[i].style.display="none";
+		}
+		imgs[index].style.display ="block";   //当所有元素都隐藏了，在显示当前index所指的图片。
+		index ++;
+		if(index >= imgs.length){
+			index=0;
+		}                      //判断index是否大于imgs的长度，等于imgs的长度后在重新赋予它初始值0           
+	}
+	timer=setInterval(show_img,1000); //建立周期定时器。
+	var login = document.getElementById("login");
+	var mask = document.getElementById("mask");
+	var show = document.getElementById("show");
+	setInterval(function(){
+        var now = new Date();
+        var str = now.getHours()+"时"+now.getMinutes()+"分"+now.getSeconds()+"秒";
+        box.innerHTML = str;
+    },1000);
+	
+
+	</script>
+	<script>
+        var tupiao = document.getElementById('tupiao');
+        var maxTop = 1000- 100;
+        var maxLeft = document.body.clientWidth - 100;
+        var speedY = 2; 
+        var speedX = 3; 
+    	function move(){
+            var curLeft = parseInt( getStyle(tupiao,'left') );
+            var curTop = parseInt( getStyle(tupiao,'top') );
+
+            if(curTop > maxTop || curTop<0){
+                speedY = -speedY;
+            }
+            if(curLeft > maxLeft || curLeft<0){
+                speedX = -speedX;
+            }
+            tupiao.style.left = curLeft + speedX + 'px';  
+            tupiao.style.top = curTop + speedY + 'px';  
+
+        }
+            
+        var id = setInterval(move,50)
+
+        tupiao.onmouseout = function(){
+            id = setInterval(move,50)
+        }
+        tupiao.onmouseover = function(){
+            clearInterval(id)
+        }
+        tupiao.onclick = function(){
+            document.body.removeChild(this);
+        }
+            
+        function getStyle(obj,attr){
+            if(obj.currentStyle){
+                return obj.currentStyle[attr];
+            }else{
+                return getComputedStyle(obj)[attr]
+            }
+        }
+        // var ifg=document.getElementById('layer');
+        // var x=0;
+        // var y=0;
+        // var xspeed=5;
+        // var yspeed=5;
+        // var w=document.body.clientWidth-150;
+        // var h=document.body.clientHeight-150;
+        // function floating(){
+        // 	if(x>w||x<0){
+        // 		xspeed=-xspeed;
+        // 	}
+        // 	if(y>h||y<0){
+        // 		yspeed=-yspeed;
+        // 	}
+        // 	x+=xspeed;
+        // 	y+=yspeed;
+        // 	layer.style.left=x+'px';
+        // 	layer.style.top=y+'px';
+        // 	setIimeout("floating()",1000);
+        // }
+        // floating();
+    </script>
+
+	</body>
+	</html>
